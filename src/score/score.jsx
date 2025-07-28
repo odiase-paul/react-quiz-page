@@ -1,11 +1,17 @@
-import { Fragment } from "react";
-import { useNavigate } from "react-router-dom";
+import { Fragment, useContext } from "react";
+import "./score.css";
+import { QuestionsContext } from "../context/QuestionsContext";
 
-const ScoreApp = ({ finalScore, handleRestart }) => {
-  const navigate = useNavigate();
+const ScoreApp = () => {
+  const {
+    finalScore,
+    refreshFinalScore,
+    filteredQuestions,
+    numberOfQuizQuestion,
+  } = useContext(QuestionsContext);
+
   const handleRestartHere = () => {
-    navigate("/");
-    handleRestart();
+    refreshFinalScore();
   };
 
   return (
@@ -13,14 +19,20 @@ const ScoreApp = ({ finalScore, handleRestart }) => {
       <div className="final-score-result">
         <div style={{ marginTop: "30px" }} className="end-result">
           <h2>Completed!🎇</h2>
-          <br />
-          <br />
-          <p className="score">Your final score is {finalScore}</p>
         </div>
-        <br />
-        <br />
-        <div>
-          <button onClick={handleRestartHere}>Retake Quiz</button>
+        <div className="score">
+          <p>Well done!</p>
+          <p>
+            You answered <span className="score-number">{finalScore}</span> of{" "}
+            <span className="score-number">
+              {numberOfQuizQuestion.length || filteredQuestions.length}
+            </span>{" "}
+            correctly
+          </p>
+        </div>
+
+        <div className="back-to-menu">
+          <button onClick={handleRestartHere}>Back to Menu</button>
         </div>
       </div>
     </Fragment>

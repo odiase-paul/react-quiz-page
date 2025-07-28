@@ -1,62 +1,38 @@
-import sports from "../img/sport_2.jpg";
-import general from "../img/general.jpg";
-import entertainment from "../img/entertainment.jpg";
-import geography from "../img/geography.jpg";
 import "./landing.css";
 import Background from "../background/background";
 import { Fragment } from "react";
+import { Categories } from "../ReuseableComponent/CategoriesList";
 
 const LandingPage = () => {
-  const categories = [
-    {
-      id: 1,
-      imageCategory: general,
-      title: "General",
-      route: "general",
-    },
-    {
-      id: 2,
-      imageCategory: sports,
-      title: "Sport",
-      route: "sports",
-    },
-    {
-      id: 3,
-      imageCategory: entertainment,
-      title: "Entertainment",
-      route: "entertainment",
-    },
-    {
-      id: 4,
-      imageCategory: geography,
-      title: "Geography",
-      route: "geography",
-    },
-  ];
-
   return (
     <Fragment>
       <div className="landingPage">
-        <div className="landing-page-color">
-          <div className="welcome-note">
-            <h1>
-              Welcome to <span>PAKH'S</span> Quiz
-            </h1>
-          </div>
-          <div className="landingPage-start-quiz">
-            <h2>
-              Click on any of the category to <br />
-              <span>Start Quiz</span>
-            </h2>
-          </div>
+        <p className="landing-page-introduction">
+          Challenge your mind, learn something new, and have fun doing it!
+          Quizakh is your go-to platform for exciting quizzes across a wide
+          range of topics from general knowledge and sports to entertainment,
+          geography, science, and more. Whether you're here to test your skills,
+          compete with friends, or just pass the time, we've got something for
+          everyone. Each quiz is designed to be quick, engaging, and
+          informative. Pick a category, take a quiz, and see how much you really
+          know!
+        </p>
+        <div className="landingPage-start-quiz">
+          <h2>
+            Click on any of the category to <br />
+            <span>Start Quiz</span>
+          </h2>
         </div>
+
         <div className="display-container">
-          {categories.map((item) => (
+          {Categories.map((item) => (
             <Background
+              bgColor={item.bgColor}
               image={item.imageCategory}
               title={item.title}
               route={item.route}
               key={item.id}
+              item={item}
             />
           ))}
         </div>

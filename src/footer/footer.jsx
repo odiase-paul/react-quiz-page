@@ -1,12 +1,17 @@
 import { Fragment } from "react";
-import { Outlet } from "react-router-dom";
 
 const Footer = () => {
   const date = new Date().getFullYear();
   return (
     <Fragment>
-      <Outlet />
-      <div>
+      <div
+        style={{
+          position: "fixed",
+          bottom: "0px",
+          left: "0px",
+          width: "100%",
+        }}
+      >
         <footer>© paulakhere@gmail.com {date}</footer>
       </div>
     </Fragment>

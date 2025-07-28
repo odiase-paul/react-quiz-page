@@ -1,18 +1,30 @@
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import { Link } from "react-router-dom";
+import "./background.css";
+import { QuestionsContext } from "../context/QuestionsContext";
 
-const Background = ({ image, title, route }) => {
+const Background = ({ image, title, bgColor, item }) => {
+  const { handleCategoryClick } = useContext(QuestionsContext);
   return (
     <Fragment>
-      <Link to={`/${route}`} className="category-container">
+      <Link
+        to={`/${item.id}`}
+        className="category-container"
+        onClick={() => handleCategoryClick(item)}
+      >
         <div
           className="background-image"
           style={{ backgroundImage: `url(${image})` }}
         >
-          <div className="category-body-container">
-            <h2>{title}</h2>
+          <button className="startQuiz">View Quiz</button>
+          <div
+            style={{ background: bgColor }}
+            className="category-body-container"
+          >
+            <h2 className="" style={{ color: "" }}>
+              {title}
+            </h2>
           </div>
-          <button className="startQuiz">Start Quiz</button>
         </div>
       </Link>
     </Fragment>

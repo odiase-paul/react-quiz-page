@@ -1,10 +1,9 @@
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
+  .introduction-to-quiz {
+    margin-bottom: 12%;
+  }
   h1 {
     font-size: 1.6rem;
-  }
-
-  .container {
-    height: 100vh;
   }
   .landing-page-color h2,
   .category-body-container h2 {
@@ -21,6 +20,7 @@
     padding: 5px 15px;
     width: 80%;
   }
+
   div.landingPage-start-quiz br {
     display: block;
   }
