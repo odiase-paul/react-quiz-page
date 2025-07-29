@@ -1,4 +1,11 @@
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
+  .buttons button {
+    width: 40%;
+    padding: 10px 5px;
+  }
+}
+
+@media (max-width: 768px) {
   .introduction-to-quiz {
     margin-bottom: 12%;
   }
@@ -17,8 +24,8 @@
     width: fit-content;
   }
   .buttons button {
-    padding: 5px 15px;
-    width: 80%;
+    padding: 10px 5px;
+    width: 90%;
   }
 
   div.landingPage-start-quiz br {

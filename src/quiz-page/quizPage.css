@@ -15,9 +15,14 @@
   text-wrap: balance;
   line-height: 1.5;
 }
+
 .quiz-question-page {
   margin-top: 2%;
 }
+.quiz-question-page h2 {
+  color: #b8860b;
+}
+
 .faq-container {
   padding: 30px;
   margin: 0 auto;
@@ -108,4 +113,10 @@ footer {
   color: #fff;
   background-color: #1f2937;
   padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .introduction-to-quiz p {
+    width: 80%;
+  }
 }

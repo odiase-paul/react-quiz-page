@@ -30,7 +30,13 @@ export const QuestionsProvider = ({ children }) => {
       : randomArray.filter(
           (category) => category.category === selectedCategory?.id
         );
-  let numberOfQuizQuestion = filteredQuestions.slice(0, 20);
+
+  let numberOfQuizQuestion =
+    selectedCategory?.id === "general"
+      ? filteredQuestions.slice(0, 40)
+      : filteredQuestions.slice(0, 20);
+
+  console.log("questions", filteredQuestions);
 
   const currentQuestion = filteredQuestions[randomQuestionNumber];
 

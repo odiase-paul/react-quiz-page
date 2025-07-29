@@ -27,4 +27,7 @@
   .final-score-result {
     margin-top: 25%;
   }
+  .back-to-menu button {
+    width: 50%;
+  }
 }
