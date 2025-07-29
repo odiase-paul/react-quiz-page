@@ -1,41 +1,3 @@
-.display-container {
-  width: 100%;
-  display: grid;
-  justify-content: space-between;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.landingPage {
-  margin: 50px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-}
-.landing-page-introduction {
-  background: #000;
-  color: #fff;
-  padding: 40px 10%;
-  line-height: 1.7;
-  text-wrap: balance;
-  font-size: 18px;
-}
-.landingPage h2 {
-  font-weight: 500;
-}
-
-.landingPage-start-quiz br {
-  display: none;
-}
-.landingPage-start-quiz h2 {
-  font-weight: 500;
-  line-height: 2;
-}
-.landingPage-start-quiz h2 span {
-  color: #8d0303;
-  font-weight: 600;
-}
-
 /* navbar */
 
 .welcome-note {
@@ -54,10 +16,74 @@
   transform: scaleX(-1);
 }
 
-.welcome-note p span {
-  color: #8d0303;
-}
 .landing-page-color {
   margin-top: 0;
   margin-bottom: 10px;
+}
+
+/* body */
+
+.display-container {
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 20px;
+}
+
+.landingPage {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.landing-page-introduction {
+  background: #000;
+  color: #fff;
+  padding: 40px 10%;
+  line-height: 1.7;
+  text-wrap: balance;
+  font-size: 18px;
+}
+.landingPage h2 {
+  font-weight: 500;
+}
+
+.landingPage-start-quiz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 60px;
+}
+.landingPage-start-quiz br {
+  display: none;
+}
+.landingPage-start-quiz h2 {
+  font-weight: 700;
+  font-size: 2.6rem;
+}
+.landingPage-start-quiz p {
+  font-weight: 500;
+  line-height: 1.5;
+}
+.landingPage-start-quiz p span {
+  color: #8d0303;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .landingPage {
+    margin: 10px 0 50px;
+  }
+  .landing-page-introduction {
+    padding: 40px 10px;
+  }
+  .landingPage-start-quiz p {
+    font-size: 1.175rem;
+  }
+  .landingPage-start-quiz h2 {
+    font-size: 2.1rem;
+  }
 }

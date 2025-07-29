@@ -36,8 +36,6 @@ export const QuestionsProvider = ({ children }) => {
       ? filteredQuestions.slice(0, 40)
       : filteredQuestions.slice(0, 20);
 
-  console.log("questions", filteredQuestions);
-
   const currentQuestion = filteredQuestions[randomQuestionNumber];
 
   const handleFinalScore = () => setFinalScore(finalScore + 1);

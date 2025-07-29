@@ -18,10 +18,11 @@ const LandingPage = () => {
           know!
         </p>
         <div className="landingPage-start-quiz">
-          <h2>
+          <h2>Categories</h2>
+          <p>
             Click on any of the category to <br />
             <span>Start Quiz</span>
-          </h2>
+          </p>
         </div>
 
         <div className="display-container">
